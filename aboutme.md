@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 关于邦赢
+title: 关于邦盈
 subtitle: 从业十六年以来 我们见证了上千个家庭的移民之路
 ---
 
