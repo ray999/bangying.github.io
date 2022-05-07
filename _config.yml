@@ -26,9 +26,9 @@ author: 移民小舟
 navbar-links:
   关于邦赢: "aboutme"
   资源:
-    - 加拿大移民局: "https://beautifuljekyll.com"
-    - 加拿大: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+    - 加拿大移民局: "https://x.com"
+    - 加拿大: "https://x.com/"
+  #Author's home: "https://deanattali.com"
 
 # --- Logo --- #
 
@@ -50,7 +50,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "someone@example.com"
-  xiaohongshu: xiaohongshu
+  #xiaohongshu: xiaohongshu
   facebook: deanattali
   github: daattali
   twitter: daattali
