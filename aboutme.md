@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: 邦赢
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+青岛邦赢移民服务
 
 - I rock a great mustache
 - I'm extremely loyal to my family
