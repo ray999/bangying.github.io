@@ -1,16 +1,16 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: 关于邦赢
+subtitle: 快来找邦赢咨询吧
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+我们是青岛邦赢，提供专业的移民咨询服务:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- 加拿大雇主移民
+- 加拿大技术移民
 
-What else do you need?
+更多请联络
 
-### My story
+### 关于邦赢
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+超过15年的专业移民咨询服务
