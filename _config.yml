@@ -24,8 +24,8 @@ author: 移民小舟
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  关于邦赢: "aboutme"
-  移民项目:
+  关 于 邦 赢: "aboutme"
+  移 民 项 目:
     - BC雇主担保移民: "https://x"
     - NB省雇主担保移民: "https://x"
     - 安省雇主担保移民: "https://x"
@@ -37,8 +37,8 @@ navbar-links:
     - 留学转移民: "https://x"
     - 大西洋四省移民: "https://x"
     - 爱德华王子岛投资移民: "https://x"
-  成功案例: "chonggonganli"
-  服务内容: "fuwuneirong"
+  成 功 案 例: "chonggonganli"
+  服 务 内 容: "fuwuneirong"
   #Author's home: "https://deanattali.com"
 
 # --- Logo --- #
@@ -48,7 +48,7 @@ navbar-links:
 avatar: "/assets/img/邦盈.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+round-avatar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
