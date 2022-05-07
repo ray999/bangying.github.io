@@ -61,10 +61,10 @@ round-avatar: false
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "someone@example.com"
-  #xiaohongshu: xiaohongshu
-  facebook: deanattali
+  xiaohongshu: yiminxiaozhou
+  tiktok: yiminxiaozhou
   github: daattali
-  twitter: daattali
+  douyin: yiminxiaozhou
   patreon: DeanAttali
   youtube: c/daattali
 #  reddit: yourname
@@ -92,9 +92,9 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
+  xiaohongshu: true
+  tiktok: true
+  douyin: true
   vk: false
 
 # How to display the link to your website in the footer
