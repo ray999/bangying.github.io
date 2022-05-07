@@ -26,17 +26,17 @@ author: 移民小舟
 navbar-links:
   关 于 邦 赢: "aboutme"
   移 民 项 目:
-    - BC雇主担保: "https://x"
-    - NB省雇主担保: "https://x"
-    - 安省雇主担保: "https://x"
-    - 萨省企业家移民: "https://x"
-    - 萨省雇主担保: "https://x"
-    - 魁省技术移民: "https://x"
-    - 联邦创业移民: "https://x"
-    - 联邦自雇移民: "https://x"
-    - 留学转移民: "https://x"
-    - 大西洋四省移民: "https://x"
-    - 爱德华王子岛投资: "https://x"
+    - BC雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=3&sn=7927bfdc55d469b47a103b100a3b0905&chksm=c35ad2bff42d5ba98e72196bff0425441ca340ad4ea9eefc3cd3227f462541d38f41548bf3cb&scene=21#wechat_redirect"
+    - NB省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485533&idx=3&sn=3a901fa2be2b2c0bb63e524db91ddf7e&chksm=c35ad25ef42d5b4886af6d7518422891a9f92c77464bdb4bc6750574ca2ffbb2dc0c454c7890&scene=21#wechat_redirect"
+    - 安省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=1&sn=2117efe672963984ba01e14c60538912&chksm=c35ad24ff42d5b5962b189af352ddee1e9cee855460e7ef178e48040ab0259488ad48238f87e&scene=21#wechat_redirect"
+    - 萨省企业家移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=4&sn=51b4c09dea03bd7949a141bb3a385316&chksm=c35ad24ff42d5b5918f6052910f3ef838ff80c18cf9f56ccfa7a251521b6a5f9cd1542863952&scene=21#wechat_redirect"
+    - 萨省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=4&sn=de123687aaaeaadc36ce474cbb7f61e0&chksm=c35ad2bff42d5ba952ceb8edbd85e70c8e875ba592b34c69cdf8438d11ce946d0281c580cbe0&scene=21#wechat_redirect"
+    - 魁省技术移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=3&sn=44070366ceefb1974c9736a0f16b2a26&chksm=c35ad255f42d5b43833e5706a733cd8fdb7db02121bf8bc718f08d8558ef9f2fbf82ca9043cc&scene=21#wechat_redirect"
+    - 联邦创业移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=2&sn=1d0a72a3cf3239d75aec1585aac9b041&chksm=c35ad255f42d5b43d7f9b422c98998c9cf2580b3116cb000753046684cfb383c4c5689ff1c65&scene=21#wechat_redirect"
+    - 联邦自雇移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=1&sn=339a4e7dca2303749d3396168a8c3126&chksm=c35ad255f42d5b430350db1c214e9018be35cad868e3dc5555148775ea799557d8860c72afd9&scene=21#wechat_redirect"
+    - 留学转移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=2&sn=bf7ba7e79564f0b06ed9cfd3aa0cf2e1&chksm=c35ad24ff42d5b5907a25f41decc022c3781fb0769615d8cc11eab0b7adcf1350798cf8bd933&scene=21#wechat_redirect"
+    - 大西洋四省移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=4&sn=2ee208fe22ad136405872e4917fe3b71&chksm=c35ad255f42d5b4315f20938a4cc3bf7fd90b4f0b854fd74722cf6587f6af1cf1b7337804097&scene=21#wechat_redirect"
+    - 爱德华王子岛投资: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485648&idx=2&sn=9cc5777f0f7433aa79a2d34037932c52&chksm=c35ad2d3f42d5bc591890c6083242b3800ba2e68c18be1ca7d7a4a48d6254fb627956cb401d1&scene=21#wechat_redirect"
   成 功 案 例: "chenggonganli"
   服 务 内 容: "fuwuneirong"
   #Author's home: "https://deanattali.com"
@@ -248,7 +248,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-remote_theme: daattali/beautiful-jekyll@5.0.0
+#remote_theme: daattali/beautiful-jekyll@5.0.0
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
