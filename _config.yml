@@ -9,12 +9,12 @@
 title: BangYing
 
 # Your name to show in the footer
-author: 移民小舟
+author: Immigration
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: 关于邦赢
+  About Me: About BangYing
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
