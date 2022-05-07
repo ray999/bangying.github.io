@@ -1,3 +1,8 @@
+img[src*="#width-full"] {
+ width: 50%;
+ height: 50%
+}
+
 ---
 layout: page
 title: 关于邦赢
@@ -7,7 +12,7 @@ subtitle: 从业十六年以来 我们见证了上千个家庭的移民之路
 为了帮助有移民梦的申请人真正通过移民改善自己的生活，
 我们-邦盈移加易-经过多年的摸索形成了自己独有的服务团队：
 国内咨询顾问兼文案高手、专业的规划师、加拿大持牌顾问和律师以及境外服务小组，提供申请人需要的全部服务：
-![](/assets/img/640.png)
+![](/assets/img/640.png#width-full)
 *最终，让移民真正改善您的生活！*
 
 
@@ -17,12 +22,12 @@ subtitle: 从业十六年以来 我们见证了上千个家庭的移民之路
 从业16年
 超过15年的专业移民咨询服务
 青岛地址：青岛市李沧区铜川路216号丝路协创中心4楼
-![](/assets/img/641.jpeg){:height="50%" width="50%"}
+![](/assets/img/641.jpeg#width-full)
 
 * 周颖（顾问+心理咨询师）
 从业16年
 北京地址：北京市朝阳区建国路108号横琴人寿大厦9层
-![](/assets/img/642.jpeg){:height="50%" width="50%"}
+![](/assets/img/642.jpeg#width-full)
 
 ### 境外团队介绍
 
@@ -30,15 +35,15 @@ subtitle: 从业十六年以来 我们见证了上千个家庭的移民之路
 专注于商业投资项目的分析选择及操作管理
 填补了企业家/农场主投资移民登陆后商业服务的空缺
 致力于帮助企业家/农场主投资移民对接本地资源
-![公司办公室](/assets/img/643.jpeg){:height="50%" width="50%"}
-![萨省持牌顾问](/assets/img/644.jpeg){:height="50%" width="50%"}
-![萨省持牌顾问](/assets/img/645.jpeg){:height="50%" width="50%"}
+![公司办公室](/assets/img/643.jpeg#width-full)
+![萨省持牌顾问](/assets/img/644.jpeg#width-full)
+![萨省持牌顾问](/assets/img/645.jpeg#width-full)
 
 #### 加拿大NB省圣约翰公司02
 是NB省当地操作案例最多、从业时间最长的老牌持牌顾问公司
 过去10年期间，为1000位申请人提供了移民服务，其跟当地的很多机构保持很好的关系
-![当地报纸相关报道](/assets/img/646.jpeg){:height="50%" width="50%"}
-![NB省会议室](/assets/img/647.jpeg){:height="50%" width="50%"}
-![NB省持牌顾问](/assets/img/648.jpeg){:height="50%" width="50%"}
+![当地报纸相关报道](/assets/img/646.jpeg#width-full)
+![NB省会议室](/assets/img/647.jpeg#width-full)
+![NB省持牌顾问](/assets/img/648.jpeg#width-full)
 
 * 除此之外，我们在BC省，ON省，魁省均有合作多年的商务合作伙伴。
