@@ -9,7 +9,7 @@
 title: 青岛邦盈
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+description: 移民咨询 移民服务
 
 # GitHub Actions
 repository: "VincentTam/beautiful-jekyll"
@@ -26,17 +26,17 @@ author: 移民小舟
 navbar-links:
   关 于 邦 赢: "aboutme"
   移 民 项 目:
-    - BC雇主担保移民: "https://x"
-    - NB省雇主担保移民: "https://x"
-    - 安省雇主担保移民: "https://x"
+    - BC雇主担保: "https://x"
+    - NB省雇主担保: "https://x"
+    - 安省雇主担保: "https://x"
     - 萨省企业家移民: "https://x"
-    - 萨省雇主担保移民: "https://x"
+    - 萨省雇主担保: "https://x"
     - 魁省技术移民: "https://x"
     - 联邦创业移民: "https://x"
     - 联邦自雇移民: "https://x"
     - 留学转移民: "https://x"
     - 大西洋四省移民: "https://x"
-    - 爱德华王子岛投资移民: "https://x"
+    - 爱德华王子岛投资: "https://x"
   成 功 案 例: "chonggonganli"
   服 务 内 容: "fuwuneirong"
   #Author's home: "https://deanattali.com"
