@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 成功案例
-subtitle: 在过去多年的过程中，我们不同的项目均有成功案例。
+subtitle: 在过去多年的过程中，我们不同的项目均有成功案例
 ---
 
 在经过当事申请人的同意后，我们将可以公布出来的案例做了总结，回顾了当时移民申请的真实过程，其中包括了申请的移民局官方文件和时间进度。  
@@ -23,4 +23,4 @@ subtitle: 在过去多年的过程中，我们不同的项目均有成功案例�
 * [曼留移民-44岁大龄妈妈涉险过关](http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485584&idx=3&sn=68e4ef1e9121f5b1e2ca30a08b80a646&chksm=c35ad293f42d5b85163e40da3a3991a1339e5ea43a6fa24ef6d643c5403e0bf7c9df47c04ba3&scene=21#wechat_redirect)
 * [联邦自雇-跆拳道老师成功获批](http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485584&idx=4&sn=466dc0ebc26e338a81f2d00f7bb32fa5&chksm=c35ad293f42d5b85f8399a9c5772258214a6a366929236a54579d82c63faaabcc26322a5b31e&scene=21#wechat_redirect)
 * [PEI企业家-大学老师竟然也获批](http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485648&idx=1&sn=984ed027cb6e27515718fadaa403812b&chksm=c35ad2d3f42d5bc55be53128524e90201f0269ba3e009114e20bf250a8520778f33af278cfbf&scene=21#wechat_redirect)
-* [更多雇主案例点我查看](http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485584&idx=2&sn=f23303a59cca6098b7183c3195fc9eaa&chksm=c35ad293f42d5b8506c6e339096c7dfaf072e84aa5f5778e3c87bc5d589134e00717681f5889&scene=21#wechat_redirect)
+[更多雇主案例点我查看](http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485584&idx=2&sn=f23303a59cca6098b7183c3195fc9eaa&chksm=c35ad293f42d5b8506c6e339096c7dfaf072e84aa5f5778e3c87bc5d589134e00717681f5889&scene=21#wechat_redirect)
