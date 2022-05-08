@@ -9,7 +9,7 @@
 title: 青岛邦盈
 
 # Short description of your site
-description: 移民咨询 移民服务
+description: 移民咨询 移民服务 雇主担保 创业移民 自雇移民 技术移民
 
 # GitHub Actions
 repository: "VincentTam/beautiful-jekyll"
@@ -48,7 +48,7 @@ navbar-links:
 avatar: "/assets/img/邦盈.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: false
+round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
@@ -65,8 +65,8 @@ social-network-links:
   tiktok: yiminxiaozhou
   github: daattali
   douyin: yiminxiaozhou
-  patreon: DeanAttali
-  youtube: c/daattali
+  patreon: yiminxiaozhou
+  youtube: yiminxiaozhou
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -99,7 +99,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "bangying.com"
+url-pretty: "easyimmi.cn"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -111,7 +111,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "移民, 加拿大移民, 雇主担保移民, 投资移民, 技术移民, 澳洲移民, 创业移民, 省提名, 自雇移民, 留学转移民, 旅转学, 创业移民"
 
 # --- Colours / background image --- #
 
@@ -132,7 +132,7 @@ footer-link-col: "#404040"
 # instead of colour
 
 #navbar-img: "/assets/img/bgimage.png"
-#footer-img: "/assets/img/bgimage.png"
+footer-img: "/assets/img/bgimage.png"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
@@ -208,7 +208,7 @@ date_format: "%B %-d, %Y"
 # --- You don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Asia/ShangHai"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
