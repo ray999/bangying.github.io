@@ -1,9 +1,10 @@
 ---
 layout: post
-title: 移民新闻动态
-subtitle: 移民局最新政策
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-tags: [news]
-comments: true
+title: 雇主担保必须做到的几点
+subtitle: 不忽略这几点，基本就稳了
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [小红书]
 ---
+[不忽略这几点，雇主担保基本上就稳了](http://xhslink.com/bbgf8g)
