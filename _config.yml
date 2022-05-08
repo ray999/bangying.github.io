@@ -9,7 +9,7 @@
 title: 邦盈移加易
 
 # Short description of your site
-description: 移民咨询 移民服务 雇主担保 创业移民 自雇移民 技术移民
+description: 移民咨询 移民服务 雇主担保 创业移民 自雇移民 技术移民 邦盈
 
 # GitHub Actions
 repository: "VincentTam/beautiful-jekyll"
@@ -52,7 +52,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /path/to/image
+title-img: /assets/img/邦盈.png
 
 
 # --- Footer social media links --- #
@@ -86,7 +86,7 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+# rss-description: This website is a virtual proof that I'm awesome
 
 # --- General options --- #
 
@@ -111,7 +111,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # The keywords to associate with your website, for SEO purposes
-keywords: "移民, 加拿大移民, 雇主担保移民, 投资移民, 技术移民, 澳洲移民, 创业移民, 省提名, 自雇移民, 留学转移民, 旅转学, 创业移民"
+keywords: "邦盈, 移加易, 青岛邦盈, 移民, 加拿大移民, 雇主担保移民, 投资移民, 技术移民, 澳洲移民, 创业移民, 省提名, 自雇移民, 留学转移民, 旅转学, 创业移民"
 
 # --- Colours / background image --- #
 
