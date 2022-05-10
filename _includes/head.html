@@ -31,6 +31,10 @@
 
   <meta name="description" content="{{ description }}">
 
+  {% if site.baidu-site-verification %}
+  <meta name="baidu-site-verification" content="{{ site.baidu-site-verification }}">
+  {% endif %}
+  
   {% if site.mobile-theme-col %}
   <meta name="theme-color" content="{{ site.mobile-theme-col }}">
   {% endif %}
@@ -78,6 +82,7 @@
   {% if site.fb_app_id %}
   <meta property="fb:app_id" content="{{ site.fb_app_id }}">
   {% endif %}
+
 
   {% if site.title %}
   <meta property="og:site_name" content="{{ site.title }}">
