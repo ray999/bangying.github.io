@@ -25,8 +25,8 @@ baidu-site-verification: "code-nTSuT9Ql1Q"
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  关 于 邦 赢: "aboutme"
-  移 民 项 目:
+  关于邦赢: "aboutme"
+  移民项目:
     - BC雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=3&sn=7927bfdc55d469b47a103b100a3b0905&chksm=c35ad2bff42d5ba98e72196bff0425441ca340ad4ea9eefc3cd3227f462541d38f41548bf3cb&scene=21#wechat_redirect"
     - NB省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485533&idx=3&sn=3a901fa2be2b2c0bb63e524db91ddf7e&chksm=c35ad25ef42d5b4886af6d7518422891a9f92c77464bdb4bc6750574ca2ffbb2dc0c454c7890&scene=21#wechat_redirect"
     - 安省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=1&sn=2117efe672963984ba01e14c60538912&chksm=c35ad24ff42d5b5962b189af352ddee1e9cee855460e7ef178e48040ab0259488ad48238f87e&scene=21#wechat_redirect"
@@ -38,9 +38,9 @@ navbar-links:
     - 留学转移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=2&sn=bf7ba7e79564f0b06ed9cfd3aa0cf2e1&chksm=c35ad24ff42d5b5907a25f41decc022c3781fb0769615d8cc11eab0b7adcf1350798cf8bd933&scene=21#wechat_redirect"
     - 大西洋四省移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=4&sn=2ee208fe22ad136405872e4917fe3b71&chksm=c35ad255f42d5b4315f20938a4cc3bf7fd90b4f0b854fd74722cf6587f6af1cf1b7337804097&scene=21#wechat_redirect"
     - 爱德华王子岛投资: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485648&idx=2&sn=9cc5777f0f7433aa79a2d34037932c52&chksm=c35ad2d3f42d5bc591890c6083242b3800ba2e68c18be1ca7d7a4a48d6254fb627956cb401d1&scene=21#wechat_redirect"
-  成 功 案 例: "chenggonganli"
-  服 务 内 容: "fuwuneirong"
-  自 雇 课 堂: "https://apprxycjw0d7727.h5.xiaoeknow.com/p/decorate/homepage"
+  成功案例: "chenggonganli"
+  服务内容: "fuwuneirong"
+  自雇课堂: "https://apprxycjw0d7727.h5.xiaoeknow.com/p/decorate/homepage"
   #Author's home: "https://deanattali.com"
 
 # --- Logo --- #
