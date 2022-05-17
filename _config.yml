@@ -9,7 +9,7 @@
 title: 邦盈移加易
 
 # Short description of your site
-description: 移民咨询 移民服务 雇主担保 创业移民 自雇移民 技术移民 邦盈 移加易
+description: 移民咨询 移民服务 雇主担保 创业移民 自雇移民 技术移民 邦盈 移加易 在线学习
 
 # GitHub Actions
 repository: "VincentTam/beautiful-jekyll"
@@ -40,6 +40,7 @@ navbar-links:
     - 爱德华王子岛投资: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485648&idx=2&sn=9cc5777f0f7433aa79a2d34037932c52&chksm=c35ad2d3f42d5bc591890c6083242b3800ba2e68c18be1ca7d7a4a48d6254fb627956cb401d1&scene=21#wechat_redirect"
   成 功 案 例: "chenggonganli"
   服 务 内 容: "fuwuneirong"
+  自 雇 课 堂: "https://apprxycjw0d7727.h5.xiaoeknow.com/p/decorate/homepage"
   #Author's home: "https://deanattali.com"
 
 # --- Logo --- #
