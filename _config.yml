@@ -44,6 +44,7 @@ navbar-links:
   小工具: 
     - EE CRS: "EE_CRS.html"
     - 联邦技术移民打分 : "EE_SCORE.html"
+    - BCPNP技术打分 : "BCPNP.html"
  
   #Author's home: "https://deanattali.com"
 
