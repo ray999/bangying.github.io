@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://rglobalvisa.com/tool/index4.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script>
+
+<title>联邦移民打分表</title>
+<style type="text/css">
+			img.wp-smiley,
+			img.emoji {
+				display: inline !important;
+				border: none !important;
+				box-shadow: none !important;
+				height: 1em !important;
+				width: 1em !important;
+				margin: 0 .07em !important;
+				vertical-align: -0.1em !important;
+				background: none !important;
+				padding: 0 !important;
+			}
+		</style>
+		<link rel="stylesheet" id="yarppWidgetCss-css" href="./EE_CRS_files/widget.css" type="text/css" media="all">
+		<link rel="stylesheet" id="wp-pagenavi-css" href="./EE_CRS_files/pagenavi-css.css" type="text/css" media="all">
+		<link rel="stylesheet" id="u-design-reset-css" href="./EE_CRS_files/reset.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-text-css" href="./EE_CRS_files/text.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-grid-960-css" href="./EE_CRS_files/960.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-superfish_menu-css" href="./EE_CRS_files/superfish.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-pretty_photo-css" href="./EE_CRS_files/prettyPhoto.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-font-awesome-css" href="./EE_CRS_files/font-awesome.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-style-css" href="./EE_CRS_files/style_002.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-custom-style-css" href="./EE_CRS_files/custom_style.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-responsive-css" href="./EE_CRS_files/responsive.css" type="text/css" media="screen">
+		<link rel="stylesheet" id="u-design-style-orig-css" href="./EE_CRS_files/style.css" type="text/css" media="screen">
+		<!--[if lte IE 9]>
+<link rel='stylesheet' id='u-design-ie9-css'  href='http://eoivisa.com/wp-content/themes/u-design/styles/common-css/ie-all.css?ver=2.13.11' type='text/css' media='screen' />
+<![endif]-->
+		<!--[if lte IE 7]>
+<link rel='stylesheet' id='u-design-ie7-css'  href='http://eoivisa.com/wp-content/themes/u-design/styles/common-css/ie6-7.css?ver=2.13.11' type='text/css' media='screen' />
+<![endif]-->
+		<script type="text/javascript" src="./EE_CRS_files/jquery.js"></script>
+		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://eoivisa.com/xmlrpc.php?rsd">
+		<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://eoivisa.com/wp-includes/wlwmanifest.xml">
+		<link rel="shortlink" href="http://eoivisa.com/?p=1453">
+		<link rel="pingback" href="http://eoivisa.com/xmlrpc.php">
+		<!--[if lt IE 9]>
+    <script type="text/javascript" src="http://eoivisa.com/wp-content/themes/u-design/scripts/respond.min.js"></script>
+<![endif]-->
+
+	</head>
+
+	<body style=" background: #000;">
+
+		<div id="wrapper-1">
+			<!-- end top-wrapper -->
+			<div>
+				<div id="content-container" class="container_24">
+					<div id="main-content" class="grid_16">
+						<div class="main-content-padding">
+							<!-- end page-title -->
+							<div class="post-1453 page type-page status-publish hentry" id="post-1453">
+								<div class="entry">
+									<style>
+										.questionnaire {
+											border-collapse: collapse;
+											width: 100%;
+										}
+										
+										.questionnaire td {
+											text-align: center;
+											padding: 2px;
+											vertical-align: middle;
+										}
+										
+										.questionnaire .left {
+											text-align: left;
+										}
+										
+										.questionnaire .vcenter {
+											vertical-align: middle;
+										}
+										
+										.questionnaire .notop {
+											border-top: none;
+											background-color: #FFF9F4;
+											vertical-align: top;
+										}
+										
+										.questionnaire .nobottom {
+											border-bottom: none;
+											background-color: #FFF9F4;
+											vertical-align: top;
+										}
+										
+										.mainlangerror,
+										.sixerror,
+										.workexperror {
+											color: #D60707;
+										}
+										
+										.mainlangerror,
+										.sixerror {
+											display: none;
+										}
+										
+										label {
+											display: block;
+										}
+									</style>
+									<div style=" height:35px; line-height:35px; background:#3d4b61; color:#FFF; margin:0 auto; text-align:center;">
+										联邦
+									</div>
+									<table class="questionnaire">
+										<tbody>
+
+											<tr>
+												<td width="15%" style="font-size:16px; font-weight:700; border-right:3px solid #CCC; background:#FFF;">婚姻</td>
+												<td width="62%" style=" border-right:3px solid #CCC; text-align:center; background:#FFF;">
+													<label><input value="attached" name="ques0" class="checked" checked="checked" type="radio">已婚</label>
+													<label><input value="single" name="ques0" class="checked" type="radio"> 单身</label>
+												</td>
+												<td width="10%" style=" background:#FFF;"></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													学历
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+
+											<tr style=" border-bottom:1px solid #CCC;">
+												<td style="border-right:3px solid #CCC; background:#FFF;">学历</td>
+												<td class="left" style=" padding-left:20px; background:#FFF;">
+													<label><input value="0" name="ques2" type="radio"> 博士学位</label>
+													<label><input value="1" name="ques2" type="radio"> 硕士学位</label>
+													<label><input value="2" name="ques2" type="radio"> 双本科学位或者双大专</label>
+													<label><input value="3" name="ques2" type="radio"> 本科或者三年以上大专</label>
+													<label><input value="4" name="ques2" type="radio"> 两年制大专</label>
+													<label><input value="5" name="ques2" type="radio"> 一年制大专</label>
+													<label><input value="6" name="ques2" type="radio"> 高中毕业</label>
+												</td>
+												<td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result2">25</span></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													语言
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+											<tr style=" border-bottom:1px solid #CCC;">
+												<td style="border-right:3px solid #CCC; background:#FFF;">英语</td>
+												<td class="left" style=" padding-left:20px; background:#FFF;">
+													<label><input value="0" name="ques4" type="radio"> CLB level 9 or higher</label>
+													<label><input value="1" name="ques4" type="radio"> CLB level 8</label>
+													<label><input value="2" name="ques4" type="radio"> CLB level 7</label>
+												</td>
+												<td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result4">20</span></td>
+											</tr>
+											<tr style=" border-bottom:1px solid #CCC;">
+												<td style="border-right:3px solid #CCC; background:#FFF;">法语</td>
+												<td class="left" style=" padding-left:20px; background:#FFF;">
+													<label><input value="0" name="ques5" type="radio"> 至少CLB5</label>
+													<label><input value="1" name="ques5" type="radio"> CLB4或以下</label>
+												</td>
+												<td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result5"></span></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													工作经验
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+											<tr style=" border-bottom:1px solid #CCC;">
+												<td width="15%" style="border-right:3px solid #CCC;background:#FFF;">工作经验</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;">
+													<label><input value="0" name="ques10" type="radio"> 1 年</label>
+													<label><input value="1" name="ques10" type="radio"> 2-3 年</label>
+													<label><input value="2" name="ques10" type="radio"> 4-5 年</label>
+													<label><input value="2" name="ques10" type="radio"> 6 年或更多</label>
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result10" class="spouseres">11</span></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													年龄
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+											<tr style=" border-bottom:1px solid #CCC; height:40px;">
+
+												<td style="border-right:3px solid #CCC; background:#FFF;">年龄</td>
+												<td class="left" width="62%" style=" padding-left:20px; background:#FFF;">
+													<input placeholder="请填写年龄数字" id="ques1" class="inputtext" width="120px" type="text"></td>
+												<td width="10%" style=" border-left:3px solid #CCC; background:#FFF;"><span id="result1"></span></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													是否在加拿大已经有工作Offer
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+											<tr style=" border-bottom:1px solid #CCC;">
+
+												<td width="15%" style="border-right:3px solid #CCC;background:#FFF;" id="ques12">是否在加拿大已经有工作Offer</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;">
+													<label><input id="ques12_pnp" class="ques12" value="600" name="ques14" type="radio">是</label>
+													<label><input id="ques123" name="ques14" class="ques12" value="" type="radio">否</label>
+
+												</td>
+												
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result14">10</span></td>
+											</tr>
+											<tr>
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+													适应性
+												</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+											</tr>
+											<tr>
+
+												<td width="15%" style="border-right:3px solid #CCC;background:#FFF;border-bottom:1px solid #CCC;" id="ques12">
+													是否在加拿大有至少两年的高中及以上的读书经验</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input id="ques12_pnp" class="ques12" value="600" name="ques15" type="radio">是</label>
+													<label><input id="ques123" name="ques15" class="ques12" value="" type="radio">否</label>
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result15">5</span></td>
+											</tr>
+											<tr>
+
+												<td width="15%" style="border-right:3px solid #CCC;background:#FFF;border-bottom:1px solid #CCC;" id="ques12">
+													是否在加拿大有一年以上的工作经验</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input id="ques12_pnp" class="ques12" value="600" name="ques16" type="radio">是</label>
+													<label><input id="ques123" name="ques16" class="ques12" value="" type="radio">否</label>
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"> <span id="result16" style="display: none;">0</span></td>
+											</tr>
+											<tr>
+												<td width="15%" style="border-right:3px solid #CCC;background:#FFF;border-bottom:1px solid #CCC;" id="ques12">
+													已有安排好的工作</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input id="ques12_pnp" class="ques12" value="600" name="ques17" type="radio">是</label>
+													<label><input id="ques123" name="ques17" class="ques12" value="" type="radio">否</label>
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result17" style="display: none;">0</span></td>
+											</tr>
+											<tr>
+												<td width="15%" style="border-bottom:1px solid #CCC;background:#FFF;border-right:3px solid #CCC;" id="ques12">
+													你或者配偶是否在加拿大有亲属</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input id="ques12_pnp" class="ques12" value="600" name="ques18" type="radio">是</label>
+													<label><input id="ques123" name="ques18" class="ques12" value="" type="radio">否</label>
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result18" style="display: none;">0</span></td>
+											</tr>
+
+											<tr class="spouse" style="display: none;">
+												<td style="border-right:3px solid #CCC;background:#FFF;border-bottom:1px solid #CCC;">配偶语言</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input value="0" name="ques6" type="radio"> CLB4及以上（英语或法语）</label>
+													<label><input value="1" name="ques6" type="radio"> 无</label>
+
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result6" class="spouseres"></span></td>
+											</tr>
+
+											<tr class="spouse" style="background: rgb(255, 255, 255); display: none;">
+												<td style="border-right:3px solid #CCC;background:#FFF;border-bottom:1px solid #CCC;">配偶加拿大学习经验</td>
+												<td class="left" style=" padding-left:20px;background:#FFF;border-bottom:1px solid #CCC;">
+													<label><input value="0" name="ques7" type="radio"> 在加拿大有至少2年的高中及以上的学习经验</label>
+													<label><input value="1" name="ques7" type="radio"> 无</label>
+
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result7" class="spouseres"></span></td>
+											</tr>
+											<tr class="spouse" style="height: 45px; line-height: 45px; background: rgb(255, 255, 255); display: none;">
+												<td style="border-right:3px solid #CCC;background:#FFF;">配偶在加拿大是否有至少一年工作经验</td>
+												<td class="left" style=" padding-left:20px;">
+													<label><input value="0" name="ques11" type="radio"> 是</label>
+													<label><input value="1" name="ques11" type="radio"> 无</label>
+
+												</td>
+												<td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result11" class="spouseres"></span></td>
+											</tr>
+
+											<tr style=" border-bottom:1px solid #CCC;">
+												<td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">总分</td>
+												<td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">
+													<span id="finalresult">71</span>
+												</td>
+											</tr>
+											<tr id="finalresultTip" style="border-bottom: 1px solid rgb(204, 204, 204); display: none;">
+												<td colspan="3" style=" background:#fff; height:35px; line-height:35px;color: red;">
+                                                  <span>不符合项目要求!</span>
+                                                </td>
+											</tr>
+										</tbody>
+										
+									</table>
+									<p>
+										<!-- end-->
+									</p>
+									<style>
+										.notice.suc {
+											color: darkblue;
+										}
+										
+										.notice.fai {
+											color: #8b0000;
+										}
+										
+										.left-column {
+											display: inline-block;
+											width: 120px;
+											text-align: right;
+										}
+										
+										.common-row {
+											font-size: 1.1em;
+										}
+										
+										.sub-row {
+											font-weight: bold;
+											font-size: 1.3em;
+										}
+										
+										.sub-hr {
+											margin-top: 1px;
+											margin-bottom: 6px;
+										}
+										
+										.priceandsub {
+											float: right;
+										}
+										
+										.clear {
+											clear: both;
+										}
+										
+										.blank {
+											width: 40px;
+										}
+										
+										.shoppingcart {
+											padding: 0 24px;
+											border: 1px dotted darkgray;
+										}
+										
+										.province {
+											display: none;
+										}
+										
+										.contact_form ul {
+											list-style-type: none;
+											list-style-position: outside;
+											margin: 0px;
+											padding: 0px;
+										}
+										
+										.contact_form li {
+											padding: 12px 24px 12px 24px;
+											border-bottom: 1px solid #eee;
+											position: relative;
+											margin-left: 0;
+										}
+										
+										.contact_form label {
+											width: 100px;
+											margin-top: 3px;
+											display: inline-block;
+											float: left;
+											padding: 3px 0 3px 0;
+										}
+										
+										.contact_form input {
+											height: 20px;
+											width: 220px;
+											padding: 5px 8px;
+										}
+										
+										#payment-submit {
+											color: #fef4e9;
+											border: solid 1px #da7c0c;
+											background: #D60707;
+											filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+											display: inline-block;
+											zoom: 1;
+											/* zoom and *display = ie7 hack for display:inline-block */
+											*display: inline;
+											vertical-align: baseline;
+											margin: 0 2px;
+											outline: none;
+											cursor: pointer;
+											text-align: center;
+											text-decoration: none;
+											font: 15px/100% "Microsoft Yahei", Arial, Helvetica, sans-serif;
+											padding: .5em 2em .55em;
+											-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+											-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+											box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+											height: 40px;
+										}
+										
+										#payment-submit:hover {
+											background: #f47c20;
+											background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+											background: -moz-linear-gradient(top, #f88e11, #f06015);
+											filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+											text-decoration: none;
+										}
+										
+										#payment-submit:active {
+											color: #fcd3a5;
+											background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+											background: -moz-linear-gradient(top, #f47a20, #faa51a);
+											filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+										}
+										
+										.contact_form .hint {
+											padding-left: 100px;
+										}
+										
+										.rem {
+											padding: 12px 24px 12px 24px;
+										}
+									</style>
+									<div class="yarpp-related yarpp-related-none">
+										<p></p>
+									</div>
+								<style>
+			.return_exit{width: 120px;height: 40px;line-height: 40px;text-align: center;margin: 0 auto;background: #3d4b61;}
+			.return_exit a{text-align: center;height: 40px;display: block;color: #fff;font-size: 16px;}
+	</style>
+				<div class="return_exit"><a href="http://easyimmi.cn/">返回首页</a></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<!-- end main-content-padding -->
+					</div>
+					<!-- end main-content -->
+					<div id="sidebar" class="grid_8">
+						<!-- end sidebarSubnav -->
+					</div>
+					<!-- end sidebar -->
+				</div>
+				<!-- end content-container -->
+				<div class="clear"></div>
+			</div>
+			<!-- end page-content -->
+			<div class="clear"></div>
+			<!-- end bottom-bg -->
+			<div class="clear"></div>
+			<!-- end footer-bg -->
+			<div class="clear"></div>
+		</div>
+		<!-- end wrapper-1 -->
+		<script src="./EE_CRS_files/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				var rules = [{
+						score: [
+							[0, 1]
+						]
+					}, { //年龄
+						score: [
+							[0, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+						]
+					},
+					{ //学历
+						score: [
+							[25, 23, 22, 21, 19, 15, 5]
+
+						]
+					},
+					{ //加拿大工作经验
+						score: [
+							[0, 35, 46, 56, 63, 70],
+							[0, 40, 53, 64, 72, 80]
+						]
+					},
+					{ //第一语言
+						score: [
+							[24, 20, 16]
+						]
+					},
+					{ //第二语言
+						score: [
+							[4, 0]
+						]
+					},
+					{ //配偶学历
+						score: [
+							[5, 0]
+						]
+					},
+					{ //配偶第一语言
+						score: [
+							[5, 0]
+						]
+					},
+					{ //配偶加拿大工作经验
+						score: [
+							[0, 5, 7, 8, 9, 10]
+						]
+					},
+					{ //配偶加拿大工作经验
+						score: [
+							[0, 5, 7, 8, 9, 10]
+						]
+					},
+					{ //学历语言额外加分
+						score: [
+							[9, 11, 13, 15]
+						]
+					},
+					{ //加拿大经验配合语言加分
+						score: [
+							[5, 0]
+						]
+					},
+					{ //加拿大以外工作经验配合语言额外加分
+						score: [
+							[0, 13, 25],
+							[0, 25, 50]
+						]
+					},
+					{ //境外工作经验配合加拿大经验加分
+						score: [
+							[0, 13, 25],
+							[0, 25, 50]
+						]
+					},
+					{ //...
+						score: [
+							[10, 0]
+						]
+					},
+					{ //...
+						score: [
+							[5, 0]
+						]
+					},
+					{ //...
+						score: [
+							[10, 0]
+						]
+					},
+					{ //...
+						score: [
+							[5, 0]
+						]
+					},
+					{ //...
+						score: [
+							[5, 0]
+						]
+					},
+					{ //...
+						score: [
+							[200, 0]
+						]
+					},
+					{ //...
+						score: [
+							[50, 0]
+						]
+					},
+					{ //...
+						score: [
+							[600, 0]
+						]
+					}
+				];
+				//console.log(rules)
+				var $radio = $('input[name^="ques"]');
+				var $finalresult = $('#finalresult');
+				var isSingle = 0,
+					education = 0,
+					workYear = 0;
+				$radio.on('click', function() {
+					var id = +$(this).attr('name').split('ques')[1];
+					var index = $(this).parent().index();
+					//console.log(Number(id));
+					//console.log(index);
+					switch(true) {
+						case id === 0:
+							isSingle = rules[id].score[0][index];
+							if($('input[name="ques2"]:checked').length){
+								var num2 = rules[2].score[0][$('input[name="ques2"]:checked').parent().index()];
+							    $('#result2').html(num2);
+							}
+							if ($('input[name="ques4"]:checked').length) {
+								var num4 = rules[4].score[0][$('input[name="ques4"]:checked').parent().index()];
+							    $('#result4').html(num4);
+							}
+							if ($('input[name="ques5"]:checked').length) {
+								var num5 = rules[5].score[0][$('input[name="ques5"]:checked').parent().index()];
+							    $('#result5').html(num5);
+							}
+							if(typeof $('#ques1').val()==='number'){
+								$('#ques1').trigger('keyup');
+							}
+							if(typeof $('#ques3').val()==='number'){
+								$('#ques3').trigger('keyup');
+							}
+							if(isSingle) {
+								$('.spouse').css('display','none').find('input').prop('checked',false);
+								$('.spouse').find('.spouseres').html('');
+//								$('.spouse td').css('background-color', '#e8e8e8').find('input').attr('disabled', 'disabled');
+//								$('.spouse-header0').css('background-color', '#b1b1b1');
+//								$('.spouse-header1').css('background-color', '#b1b1b1');
+							} else {
+								$('.spouse').css('display','table-row');
+//								$('.spouse td').css('background-color', 'white').find('input').removeAttr('disabled');
+//								$('.spouse-header0').css('background-color', '#3d4b61');
+//								$('.spouse-header1').css('background-color', '#21c3c5');
+							}
+							sum();
+							break;
+						case id >= 2 && id <= 5 && id != 3:
+							var num = rules[id].score[0][index];
+							$('#result' + id).html(num);
+							break;
+						case id === 6 || id === 7:
+							var num = rules[id].score[0][index];
+							if(typeof sumLimit() === 'number'&&num) {
+								sumLimit()?($('#result' + id).html(sumLimit()).show()):($('#result' + id).html(sumLimit()).hide());
+							} else {
+								num?($('#result' + id).html(num).show()):($('#result' + id).html(num).hide());
+							}
+							break;
+						case id === 9:
+							education = index;
+							for(var i = 10; i <= 11; i++) {
+								var num = rules[i].score[education][$('input[name="ques' + i + '"]:checked').parent().index()];
+								$('#result' + i).html(num);
+							}
+							break;
+						case id >= 10 && id <= 11:
+							var num = rules[id].score[education][index];
+							if(id === 11) {
+								if(typeof sumLimit() === 'number'&&num) {
+									sumLimit()?($('#result' + id).html(sumLimit()).show()):($('#result' + id).html(sumLimit()).hide());
+								} else {
+									num?($('#result' + id).html(num).show()):($('#result' + id).html(num).hide());
+								}
+							} else {
+								$('#result' + id).html(num);
+							}
+							break;
+						case id >= 12 && id <= 13:
+							var num = rules[id].score[workYear][index];
+							$('#result' + id).html(num);
+							break;
+						case id > 13 && id <= 21:
+							if(id === 19 || id === 20) {
+								if(!index) {
+									id === 19 && $('input[name="ques20"]').eq(0).is(':checked') && $('input[name="ques20"]').eq(1).trigger('click');
+									id === 20 && $('input[name="ques19"]').eq(0).is(':checked') && $('input[name="ques19"]').eq(1).trigger('click');
+								}
+							}
+							var num = rules[id].score[0][index];
+							if(id >= 15 && id <= 18) {
+								if(typeof sumLimit() === 'number'&&num) {
+									sumLimit()?($('#result' + id).html(sumLimit()).show()):($('#result' + id).html(sumLimit()).hide());
+								} else {
+									num?($('#result' + id).html(num).show()):($('#result' + id).html(num).hide());
+								}
+							} else {
+								$('#result' + id).html(num);
+							}
+							break;
+						case id === 22:
+							workYear = index;
+							for(var i = 12; i <= 13; i++) {
+								var num = rules[i].score[workYear][$('input[name="ques' + i + '"]:checked').parent().index()];
+								$('#result' + i).html(num);
+							}
+							break;
+							break;
+						default:
+							break;
+					}
+					sum();
+				});
+				$('#ques3').on('keyup', function() {
+					var index;
+					var val = +$(this).val();
+					//console.log(val)
+					switch(true) {
+						case val < 1:
+							index = 0;
+							break;
+						case val === 1:
+							index = 1;
+							break;
+						case val === 2:
+							index = 2;
+							break;
+						case val === 3:
+							index = 3;
+							break;
+						case val === 4:
+							index = 4;
+							break;
+						case val >= 5:
+							index = 5;
+							break;
+						default:
+							break;
+					}
+					var num = rules[3].score[isSingle][index];
+					$('#result3').html(num);
+					sum();
+				});
+				$('#ques8').on('keyup', function() {
+					var index;
+					var val = +$(this).val();
+					//console.log(val)
+					switch(true) {
+						case val < 1:
+							index = 0;
+							break;
+						case val === 1:
+							index = 1;
+							break;
+						case val === 2:
+							index = 2;
+							break;
+						case val === 3:
+							index = 3;
+							break;
+						case val === 4:
+							index = 4;
+							break;
+						case val >= 5:
+							index = 5;
+							break;
+						default:
+							break;
+					}
+					var num = rules[8].score[isSingle][index];
+					$('#result8').html(num);
+					sum();
+				});
+				$('#ques1').on('keyup', function() {
+					var index;
+					var val = +$(this).val();
+					//console.log(val)
+					switch(true) {
+						case val < 18:
+							index = 0;
+							break;
+
+						case val >= 18 && val <= 35:
+							index = 1;
+							break;
+						case val === 36:
+							index = 2;
+							break;
+						case val === 37:
+							index = 3;
+							break;
+						case val === 38:
+							index = 4;
+							break;
+						case val === 39:
+							index = 5;
+							break;
+						case val === 40:
+							index = 6;
+							break;
+						case val === 41:
+							index = 7;
+							break;
+						case val === 42:
+							index = 8;
+							break;
+						case val === 43:
+							index = 9;
+							break;
+						case val === 44:
+							index = 10;
+							break;
+						case val === 45:
+							index = 11;
+							break;
+						case val === 46:
+							index = 12;
+							break;
+
+						case val >= 47:
+							index = 13;
+							break;
+						default:
+							break;
+					}
+					var num = rules[1].score[0][index];
+					$('#result1').html(num);
+					sum();
+				});
+
+				function sum() {
+					var $result = $('[id^=result]');
+					var sum = 0;
+					$result.each(function() {
+						sum += Number($(this).html());
+					});
+					$finalresult.html(sum);
+					sum<67?$('#finalresultTip').show():$('#finalresultTip').hide();
+				}
+
+				function sumLimit() {
+					var arr = ['#result15', '#result16', '#result17', '#result18', '#result6', '#result7', '#result11'];
+					var sum = 0;
+					arr.forEach(function(item) {
+						sum += Number($(item).html());
+					});
+					if(sum >= 10) {
+						return 0;
+					} else if(sum === 0) {
+						return false;
+					} else {
+						return 10 - sum;
+					}
+				}
+			});
+		</script>
+	
+
+
+</body></html>
