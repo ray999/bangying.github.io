@@ -453,12 +453,22 @@
                         <td class="left" style=" padding-left:20px;background:#FFF;">
                           <label><input value="0" name="ques11" type="radio">专科以上BC省教育经历</label>
                           <label><input value="1" name="ques11" type="radio">在BC以外的加拿大其他地区完成高等教育</label>
-                          <label><input value="2" name="ques11" type="radio">BC省指定专业*Eligible Professional Designations in B.C</label>
                           <label><input value="3" name="ques11" type="radio">无</label>
 
                         </td>
                         <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result11" class="spouseres">0</span></td>
                       </tr>
+                      <tr style=" border-bottom:1px solid #CCC;background:#FFF;">
+                        <td width="15%" style="border-right:3px solid #CCC;background:#FFF;">BC省指定专业*Eligible Professional Designations in B.C</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label><input value="2" name="ques17" type="radio">是</label>
+                          <label><input value="3" name="ques17" type="radio">否</label>
+
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result17" class="spouseres">0</span></td>
+                      </tr>
+
+
                       <tr>
                         <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
                                                  语言等级
@@ -723,7 +733,7 @@
           },
           { //加拿大经验配合语言加分
             score: [
-              [8, 6,5, 0]
+              [8, 6, 0]
             ]
           },
           { //加拿大以外工作经验配合语言额外加分
@@ -753,7 +763,7 @@
           },
           { //...
             score: [
-              [10, 0]
+              [5, 0]
             ]
           },
           { //...
