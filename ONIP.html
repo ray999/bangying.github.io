@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://rglobalvisa.com/tool/index1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}hookGeo();})()</script>
+
+<title>安省雇主担保移民评分标准（最新版2022.11.16）</title>
+    <style type="text/css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link rel="stylesheet" id="yarppWidgetCss-css" href="./EE_CRS_files/widget.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wp-pagenavi-css" href="./EE_CRS_files/pagenavi-css.css" type="text/css" media="all">
+    <link rel="stylesheet" id="u-design-reset-css" href="./EE_CRS_files/reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-text-css" href="./EE_CRS_files/text.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-grid-960-css" href="./EE_CRS_files/960.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-superfish_menu-css" href="./EE_CRS_files/superfish.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-pretty_photo-css" href="./EE_CRS_files/prettyPhoto.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-font-awesome-css" href="./EE_CRS_files/font-awesome.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-style-css" href="./EE_CRS_files/style_002.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-custom-style-css" href="./EE_CRS_files/custom_style.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-responsive-css" href="./EE_CRS_files/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" id="u-design-style-orig-css" href="./EE_CRS_files/style.css" type="text/css" media="screen">
+    <!--[if lte IE 9]>
+<link rel='stylesheet' id='u-design-ie9-css'  href='http://eoivisa.com/wp-content/themes/u-design/styles/common-css/ie-all.css?ver=2.13.11' type='text/css' media='screen' />
+<![endif]-->
+    <!--[if lte IE 7]>
+<link rel='stylesheet' id='u-design-ie7-css'  href='http://eoivisa.com/wp-content/themes/u-design/styles/common-css/ie6-7.css?ver=2.13.11' type='text/css' media='screen' />
+<![endif]-->
+    <script type="text/javascript" src="./EE_CRS_files/jquery.js"></script>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://eoivisa.com/wp-content/themes/u-design/scripts/respond.min.js"></script>
+<![endif]-->
+
+  </head>
+
+  <body style=" background: #000;">
+
+    <div id="wrapper-1">
+      <!-- end top-wrapper -->
+      <div>
+        <div id="content-container" class="container_24">
+          <div id="main-content" class="grid_16">
+            <div class="main-content-padding">
+              <!-- end page-title -->
+              <div class="post-1453 page type-page status-publish hentry" id="post-1453">
+                <div class="entry">
+                  <style>
+                    .questionnaire {
+                      border-collapse: collapse;
+                      width: 100%;
+            
+                    }
+                    
+                    .questionnaire td {
+                      text-align: center;
+                      padding: 2px;
+                  
+                      vertical-align: middle;
+                    }
+                    
+                    .questionnaire .left {
+                      text-align: left;
+                    }
+                    
+                    .questionnaire .vcenter {
+                      vertical-align: middle;
+                    }
+                    
+                    .questionnaire .notop {
+                      border-top: none;
+                      background-color: #FFF9F4;
+                      vertical-align: top;
+                    }
+                    
+                    .questionnaire .nobottom {
+                      border-bottom: none;
+                      background-color: #FFF9F4;
+                      vertical-align: top;
+                    }
+                    
+                    .mainlangerror,
+                    .sixerror,
+                    .workexperror {
+                      color: #D60707;
+                    }
+                    
+                    .mainlangerror,
+                    .sixerror {
+                      display: none;
+                    }
+                    
+                    label {
+                      display: block;
+                    }
+                  
+                  </style>
+                                    <div style=" height:35px; line-height:35px; background:#3d4b61; color:#FFF; margin:0 auto; text-align:center;">       
+                                      安省雇主担保移民评分标准（最新版2022.11.16）
+                                    </div>
+                  <table class="questionnaire">
+                    <tbody>
+                         <!--                 <tr style=" border-bottom:1px solid #CCC; border-top:10px solid #FFF;">
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 BC工作offer技能等级
+                                                </td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>
+                      <tr style="">
+                        <td style="border-right:3px solid #CCC; background:#FFF; border-bottom:1px solid #CCC;">BC工作offer技能等级</td>
+                        <td class="left" style=" padding-left:20px; background:#FFF; border-bottom:1px solid #CCC;">
+                          <label for="ques2_1"><input value="0" id="ques2_1" name="ques2" type="radio"> NOC技能等级A（包括0类）</label>
+                          <label for="ques2_2"><input value="1" id="ques2_2" name="ques2" type="radio"> NOC技能等级B</label>
+                          <label for="ques2_3"><input value="2" id="ques2_3" name="ques2" type="radio"> NOC技能等级C</label>
+                          <label for="ques2_4"><input value="3" id="ques2_4" name="ques2" type="radio"> NOC技能等级D</label>
+                        </td>
+                        <td rowspan="2" style=" border-left:3px solid #CCC; background:#FFF; width:10%;"><span id="result2">50</span></td>
+                      </tr>
+                                            
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td style="border-right:3px solid #CCC; background:#FFF;">奖励分</td>
+                        <td class="left" style=" padding-left:20px; background:#FFF;">
+                          <label for="ques4_1"><input value="0" id="ques4_1" name="ques4" type="checkbox"> 职业为NOC 00类别</label>
+                          <label for="ques4_3"><input value="2" id="ques4_3" name="ques4" type="checkbox"> 在BC省提名注册时正在为BC雇主全职工作</label>
+                        </td>
+                      </tr>
+                      </-->
+                                            <tr>
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 offer加分
+                                                </td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td style="border-right:3px solid #CCC; background:#FFF;">offer的NOC TEER加分
+
+                        <td class="left" style=" padding-left:20px; background:#FFF;">
+                                                  <label><input value="0" name="ques5" type="radio"> O或1</label>
+                                                  <label><input value="1" name="ques5" type="radio"> 2或3</label>
+                                                  <label><input value="2" name="ques5" type="radio"> 4</label>
+                                                  <label><input value="3" name="ques5" type="radio"> 5</label>   
+                            
+                        </td>
+                        <td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result5"> 0 </span></td>
+                      </tr>
+
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td style="border-right:3px solid #CCC; background:#FFF;">offer的行业大类 broad occupational category
+                        <td class="left" style=" padding-left:20px; background:#FFF;">
+                                                  <label><input value="0" name="ques6" type="radio"> Category 0,2,3</label>
+                                                  <label><input value="1" name="ques6" type="radio"> Category 7</label>
+                                                  <label><input value="2" name="ques6" type="radio"> Category1,9</label>
+                                                  <label><input value="3" name="ques6" type="radio"> Category4,8</label>   
+                                                  <label><input value="4" name="ques6" type="radio"> Category5,6</label>   
+                            
+                        </td>
+                        <td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result6"> 0 </span></td>
+                      </tr>
+
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td style="border-right:3px solid #CCC; background:#FFF;">offer的薪资
+                        <td class="left" style=" padding-left:20px; background:#FFF;">
+                                                  <label><input value="0" name="ques7" type="radio"> 时薪$40或更高 </label>
+                                                  <label><input value="1" name="ques7" type="radio"> 时薪$35-$39.99</label>
+                                                  <label><input value="2" name="ques7" type="radio"> 时薪$30-$34.99</label>
+                                                  <label><input value="3" name="ques7" type="radio"> 时薪$25-$29.99</label>   
+                                                  <label><input value="4" name="ques7" type="radio"> 时薪$20-$24.99</label>   
+                                                  <label><input value="5" name="ques7" type="radio"> 时薪低于$20</label>   
+                            
+                        </td>
+                        <td style=" border-left:3px solid #CCC; background:#FFF;"><span id="result7"> 0 </span></td>
+                      </tr>
+                                            <tr>
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 工签状态
+                                                </td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>
+                      
+                      <tr class="spouse" style=" border-bottom:1px solid #CCC;">
+                        <td style="border-right:3px solid #CCC;background:#FFF;">工签状态 </td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label>
+                                                     <input value="0" name="ques8" type="radio">
+                                                  有工签
+                                                     </label>
+                          <label>
+                                                      <input value="1" name="ques8" type="radio"><br>
+                                                        无工签
+                                                    </label>
+                       
+              
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result8" class="spouseres">0</span></td>
+                      </tr>
+
+                      <tr>
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 加拿大工作经验
+                                                </td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>
+                      <tr class="spouse" style=" border-bottom:1px solid #CCC;background:#FFF;">
+                        <td style="border-right:3px solid #CCC;background:#FFF;">给加拿大offer雇主的工作经验时长
+</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label><input value="0" name="ques9" type="radio">6个月或以上</label>
+                          <label><input value="1" name="ques9" type="radio">少于6个月</label>
+              
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result9" class="spouseres"> 0 </span></td>
+                      </tr>
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td width="15%" style="border-right:3px solid #CCC;background:#FFF;">加拿大工作经验收入历史</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                                                      <label><input value="0" name="ques10" type="radio">年收入$40K或更多</label>
+                                                      <label><input value="0" name="ques10" type="radio">年收入少于$40K</label>
+                        </td>
+                                                
+                                                
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result10" class="spouseres">0</span></td>
+                      </tr>
+
+   
+                      <tr>
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 语言加分
+</td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>                     <tr style=" border-bottom:1px solid #CCC;">
+                        <td width="15%" style="border-right:3px solid #CCC;background:#FFF;">语言能力</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label><input value="0" name="ques11" type="radio">clb9或更高</label>
+                          <label><input value="1" name="ques11" type="radio">clb 8</label>
+                          <label><input value="2" name="ques11" type="radio">Clb 7</label>
+                          <label><input value="3" name="ques11" type="radio">Clb 6或更低</label>
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result11" class="spouseres">0</span></td>
+                      </tr>
+                                         
+                      <tr style=" border-bottom:1px solid #CCC;background:#FFF;">
+                        <td width="15%" style="border-right:3px solid #CCC;background:#FFF;">语言种类</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label><input value="0" name="ques12" type="radio">2门官方语言</label>
+                          <label><input value="1" name="ques12" type="radio">1门官方语言</label>
+
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result12" class="spouseres">0</span></td>
+                      </tr>
+             
+
+
+                      <tr>
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">
+                                                 工作区域加分
+                                                </td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">分数</td>
+                      </tr>
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td width="15%" style="border-right:3px solid #CCC;background:#FFF;">工作区域</td>
+                        <td class="left" style=" padding-left:20px;background:#FFF;">
+                          <label><input value="0" name="ques13" type="radio"> 安大略省北部</label>
+                          <label><input value="1" name="ques13" type="radio"> 大多以外的其他地区（安大略省北部除外）</label>
+                          <label><input value="2" name="ques13" type="radio"> 大多伦多以内（除多伦多）</label>
+                          <label><input value="3" name="ques13" type="radio"> 多伦多</label>
+                        </td>
+                        <td style=" border-left:3px solid #CCC;background:#FFF;"><span id="result13" class="spouseres">0</span></td>
+                      </tr>
+                                           
+       
+                    
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">总分</td>
+                        <td style=" background:#21c3c5; height:35px; line-height:35px; color:#FFF;">
+                                                  <span id="finalresult">0</span>
+                                                </td>
+                      </tr>                      
+                      <tr style=" border-bottom:1px solid #CCC;">
+                        <td colspan="2" style=" background:#3d4b61; height:35px; line-height:35px; color:#FFF;">立即微信: <br>z13716680817（小周）&nbsp;&nbsp;<img class="rich_pages wxw-img" data-ratio="1" src="/assets/img/650.jpeg" data-type="jpeg" data-w="100" style="vertical-align: middle;max-width: 10%;box-sizing: border-box;"  />
+                          <br>
+                          immisupport( 赵哥) &nbsp;&nbsp;<img class="rich_pages wxw-img" data-ratio="1" src="/assets/img/651.jpeg" data-type="jpeg" data-w="100" style="vertical-align: middle;max-width: 10%;box-sizing: border-box;"  />
+ </td>
+                                              
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    <!-- end-->
+                  </p>
+                  <style>
+                    .notice.suc {
+                      color: darkblue;
+                    }
+                    
+                    .notice.fai {
+                      color: #8b0000;
+                    }
+                    
+                    .left-column {
+                      display: inline-block;
+                      width: 120px;
+                      text-align: right;
+                    }
+                    
+                    .common-row {
+                      font-size: 1.1em;
+                    }
+                    
+                    .sub-row {
+                      font-weight: bold;
+                      font-size: 1.3em;
+                    }
+                    
+                    .sub-hr {
+                      margin-top: 1px;
+                      margin-bottom: 6px;
+                    }
+                    
+                    .priceandsub {
+                      float: right;
+                    }
+                    
+                    .clear {
+                      clear: both;
+                    }
+                    
+                    .blank {
+                      width: 40px;
+                    }
+                    
+                    .shoppingcart {
+                      padding: 0 24px;
+                      border: 1px dotted darkgray;
+                    }
+                    
+                    .province {
+                      display: none;
+                    }
+                    
+                    .contact_form ul {
+                      list-style-type: none;
+                      list-style-position: outside;
+                      margin: 0px;
+                      padding: 0px;
+                    }
+                    
+                    .contact_form li {
+                      padding: 12px 24px 12px 24px;
+                      border-bottom: 1px solid #eee;
+                      position: relative;
+                      margin-left: 0;
+                    }
+                    
+                    .contact_form label {
+                      width: 100px;
+                      margin-top: 3px;
+                      display: inline-block;
+                      float: left;
+                      padding: 3px 0 3px 0;
+                    }
+                    
+                    .contact_form input {
+                      height: 20px;
+                      width: 220px;
+                      padding: 5px 8px;
+                    }
+                    
+                    #payment-submit {
+                      color: #fef4e9;
+                      border: solid 1px #da7c0c;
+                      background: #D60707;
+                      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+                      display: inline-block;
+                      zoom: 1;
+                      /* zoom and *display = ie7 hack for display:inline-block */
+                      *display: inline;
+                      vertical-align: baseline;
+                      margin: 0 2px;
+                      outline: none;
+                      cursor: pointer;
+                      text-align: center;
+                      text-decoration: none;
+                      font: 15px/100% "Microsoft Yahei", Arial, Helvetica, sans-serif;
+                      padding: .5em 2em .55em;
+                      -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                      -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                      box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+                      height: 40px;
+                    }
+                    
+                    #payment-submit:hover {
+                      background: #f47c20;
+                      background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+                      background: -moz-linear-gradient(top, #f88e11, #f06015);
+                      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+                      text-decoration: none;
+                    }
+                    
+                    #payment-submit:active {
+                      color: #fcd3a5;
+                      background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+                      background: -moz-linear-gradient(top, #f47a20, #faa51a);
+                      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+                    }
+                    
+                    .contact_form .hint {
+                      padding-left: 100px;
+                    }
+                    
+                    .rem {
+                      padding: 12px 24px 12px 24px;
+                    }
+                  </style>
+                  <div class="yarpp-related yarpp-related-none">
+                    <p></p>
+                  </div>
+    <style>
+      .return_exit{width: 120px;height: 40px;line-height: 40px;text-align: center;margin: 0 auto;background: #3d4b61;}
+      .return_exit a{text-align: center;height: 40px;display: block;color: #fff;font-size: 16px;}
+  </style>
+        <div class="return_exit"><a href="http://easyimmi.cn/">返回首页</a></div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <!-- end main-content-padding -->
+          </div>
+          <!-- end main-content -->
+          <div id="sidebar" class="grid_8">
+            <!-- end sidebarSubnav -->
+          </div>
+          <!-- end sidebar -->
+        </div>
+        <!-- end content-container -->
+        <div class="clear"></div>
+      </div>
+      <!-- end page-content -->
+      <div class="clear"></div>
+      <!-- end bottom-bg -->
+      <div class="clear"></div>
+      <!-- end footer-bg -->
+      <div class="clear"></div>
+    </div>
+    <!-- end wrapper-1 -->
+    <script src="./EE_CRS_files/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function() {
+        var rules = [{
+            score: [
+              [0, 1]
+            ]
+          }, { //年龄
+            score: [
+              [25, 20, 5, 5],
+            ]
+          },
+          { //学历
+            score: [
+              [25, 10, 5, 5],
+            ]
+          },
+          { //加拿大工作经验
+            score: [
+              [0, 35, 46, 56, 63, 70],
+              [0, 40, 53, 64, 72, 80]
+            ]
+          },
+          { //第一语言
+            score: [
+              [15, 10, 10]
+            ]
+          },
+          { //第二语言
+            score: [
+              [10,8,0,0 ]
+              
+            ]
+          },
+          { //配偶学历
+            score: [
+              [10, 7, 5,4,3]
+            ]
+          },
+          { //配偶第一语言
+            score: [
+              [10, 8, 7, 6, 5, 0]
+            ]
+          },
+          { //配偶加拿大工作经验
+            score: [
+              [10, 0]
+            ]
+          },
+          { //配偶加拿大工作经验
+            score: [
+              [3,0]
+            ]
+          },
+          { //学历语言额外加分
+            score: [
+              [3, 0]
+        
+            ]
+          },
+          { //加拿大经验配合语言加分
+            score: [
+              [10, 6, 4, 0]
+            ]
+          },
+          { //加拿大以外工作经验配合语言额外加分
+            score: [
+              [10, 5]
+            ]
+          },
+          { //境外工作经验配合加拿大经验加分
+            score: [
+              [10, 8,3,0]
+            ]
+          },
+          { //...
+            score: [
+              [10, 0]
+            ]
+          },
+          { //...
+            score: [
+              [10, 0]
+            ]
+          },
+          { //...
+            score: [
+              [10, 0]
+            ]
+          },
+          { //...
+            score: [
+              [5, 0]
+            ]
+          },
+          { //...
+            score: [
+              [30, 0]
+            ]
+          },
+          { //...
+            score: [
+              [200, 0]
+            ]
+          },
+          { //...
+            score: [
+              [50, 0]
+            ]
+          },
+          { //...
+            score: [
+              [600, 0]
+            ]
+          }
+        ];
+        //console.log(rules)
+        var $radio = $('input[name^="ques"]');
+        var $finalresult = $('#finalresult');
+        var isSingle = 0,
+          education = 0,
+          workYear=0;
+        $radio.on('click', function() {
+          var id = +$(this).attr('name').split('ques')[1];
+          var index = $(this).parent().index();
+          //console.log(Number(id));
+          //console.log(index);
+          switch(true) {
+            case id === 0:
+              isSingle = rules[id].score[0][index];
+
+              var num5 = rules[5].score[isSingle][$('input[name="ques5"]:checked').parent().index()];
+              $('#result5').html(num5);
+              $('#ques1,#ques3').trigger('keyup');
+              if (isSingle) {
+                $('.spouse td').css('background-color','#e8e8e8').find('input').attr('disabled','disabled');
+                $('.spouse-header0').css('background-color','#b1b1b1');
+                $('.spouse-header1').css('background-color','#b1b1b1');
+              } else{
+                $('.spouse td').css('background-color','white').find('input').removeAttr('disabled');
+                $('.spouse-header0').css('background-color','#3d4b61');
+                $('.spouse-header1').css('background-color','#21c3c5');
+              }
+              break;
+            case id >= 2 && id <= 5 && id != 3:
+                var restrictNum=0;
+              if(id===4){
+                var finalNum=0;
+                var sunNum=0;
+                var radioNum=0;
+                
+                $('input[name="ques2"]:checked').each(function (index) {
+                  radioNum+=rules[2].score[isSingle][$(this).parent().index()];
+                });
+                $('input[name="ques4"]:checked').each(function (index) {
+                  sunNum+=rules[4].score[isSingle][$(this).parent().index()];
+                });
+                finalNum=(radioNum+sunNum)>=60?60:radioNum+sunNum;
+                $('#result2').html(finalNum);
+              }else if(id===2){
+                var finalNum=0;
+                var sunNum=0;
+                var num = rules[id].score[isSingle][index]; 
+                if(!index){
+                  $('input[name="ques4"]').eq(0).removeAttr('disabled');
+                }else{
+                  $('input[name="ques4"]').eq(0).attr('disabled','disabled').prop('checked',false);
+                  
+                }
+                $('input[name="ques4"]:checked').each(function (index) {
+                  sunNum+=rules[4].score[isSingle][$(this).parent().index()];
+                });
+                finalNum=(num+sunNum)>=60?60:num+sunNum;
+                $('#result2').html(finalNum);
+              }else{
+                var num = rules[id].score[isSingle][index];               
+                $('#result' + id).html(num);
+              }
+              break;
+            case id === 6 || id === 7:
+              var num = rules[id].score[0][index];
+              $('#result' + id).html(num);
+              break;
+            case id === 9:
+              education = index;
+              for(var i = 10; i <= 11; i++) {
+                var num = rules[i].score[education][$('input[name="ques' + i + '"]:checked').parent().index()];
+                $('#result' + i).html(num);
+              }
+              break;
+            case id >= 10 && id <= 11:
+              var num = rules[id].score[education][index];
+              $('#result' + id).html(num);
+              break;
+            case id >= 12 && id <= 13:
+              var num = rules[id].score[workYear][index];
+              $('#result' + id).html(num);
+              break;
+            case id > 13 && id <= 21:
+              if(id === 19 || id === 20) {
+                if(!index) {
+                  id === 19 && $('input[name="ques20"]').eq(0).is(':checked') && $('input[name="ques20"]').eq(1).trigger('click');
+                  id === 20 && $('input[name="ques19"]').eq(0).is(':checked') && $('input[name="ques19"]').eq(1).trigger('click');
+                }
+              }
+              var num = rules[id].score[0][index];
+              $('#result' + id).html(num);
+              break;
+            case id === 22:
+                workYear = index;
+              for(var i = 12; i <= 13; i++) {
+                var num = rules[i].score[workYear][$('input[name="ques' + i + '"]:checked').parent().index()];
+                $('#result' + i).html(num);
+              }
+              break;
+              break;
+            default:
+              break;
+          }
+          sum();
+        });
+        
+      
+
+        function sum() {
+          var $result = $('[id^=result]');
+          var sum = 0;
+          $result.each(function() {
+            sum += Number($(this).html());
+          });
+          $finalresult.html(sum);
+        }
+      });
+    </script>
+  
+
+
+</body></html>
