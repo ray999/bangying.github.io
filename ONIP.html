@@ -771,42 +771,7 @@
                 $('#result' + id).html(num);
               }
               break;
-            case id === 6 || id === 7:
-              var num = rules[id].score[0][index];
-              $('#result' + id).html(num);
-              break;
-            case id === 9:
-              education = index;
-              for(var i = 10; i <= 11; i++) {
-                var num = rules[i].score[education][$('input[name="ques' + i + '"]:checked').parent().index()];
-                $('#result' + i).html(num);
-              }
-              break;
-            case id >= 10 && id <= 11:
-              var num = rules[id].score[education][index];
-              $('#result' + id).html(num);
-              break;
-            case id >= 12 && id <= 13:
-              var num = rules[id].score[workYear][index];
-              $('#result' + id).html(num);
-              break;
-            case id > 13 && id <= 21:
-              if(id === 19 || id === 20) {
-                if(!index) {
-                  id === 19 && $('input[name="ques20"]').eq(0).is(':checked') && $('input[name="ques20"]').eq(1).trigger('click');
-                  id === 20 && $('input[name="ques19"]').eq(0).is(':checked') && $('input[name="ques19"]').eq(1).trigger('click');
-                }
-              }
-              var num = rules[id].score[0][index];
-              $('#result' + id).html(num);
-              break;
-            case id === 22:
-                workYear = index;
-              for(var i = 12; i <= 13; i++) {
-                var num = rules[i].score[workYear][$('input[name="ques' + i + '"]:checked').parent().index()];
-                $('#result' + i).html(num);
-              }
-              break;
+            
               break;
             default:
               break;
