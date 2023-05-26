@@ -22,6 +22,7 @@ repository: "VincentTam/beautiful-jekyll"
 author: 移民小舟
 
 baidu-site-verification: "code-nTSuT9Ql1Q"
+
 # --- List of links in the navigation bar --- #
 
 navbar-links:
@@ -30,234 +31,136 @@ navbar-links:
     - BC雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=3&sn=7927bfdc55d469b47a103b100a3b0905&chksm=c35ad2bff42d5ba98e72196bff0425441ca340ad4ea9eefc3cd3227f462541d38f41548bf3cb&scene=21#wechat_redirect"
     - NB省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485533&idx=3&sn=3a901fa2be2b2c0bb63e524db91ddf7e&chksm=c35ad25ef42d5b4886af6d7518422891a9f92c77464bdb4bc6750574ca2ffbb2dc0c454c7890&scene=21#wechat_redirect"
     - 安省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=1&sn=2117efe672963984ba01e14c60538912&chksm=c35ad24ff42d5b5962b189af352ddee1e9cee855460e7ef178e48040ab0259488ad48238f87e&scene=21#wechat_redirect"
-    - 萨省企业家移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=4&sn=51b4c09dea03bd7949a141bb3a385316&chksm=c35ad24ff42d5b5918f6052910f3ef838ff80c18cf9f56ccfa7a251521b6a5f9cd1542863952&scene=21#wechat_redirect"
-    - 萨省雇主担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=4&sn=de123687aaaeaadc36ce474cbb7f61e0&chksm=c35ad2bff42d5ba952ceb8edbd85e70c8e875ba592b34c69cdf8438d11ce946d0281c580cbe0&scene=21#wechat_redirect"
-    - 魁省技术移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=3&sn=44070366ceefb1974c9736a0f16b2a26&chksm=c35ad255f42d5b43833e5706a733cd8fdb7db02121bf8bc718f08d8558ef9f2fbf82ca9043cc&scene=21#wechat_redirect"
-    - 联邦创业移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=2&sn=1d0a72a3cf3239d75aec1585aac9b041&chksm=c35ad255f42d5b43d7f9b422c98998c9cf2580b3116cb000753046684cfb383c4c5689ff1c65&scene=21#wechat_redirect"
-    - 联邦自雇移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=1&sn=339a4e7dca2303749d3396168a8c3126&chksm=c35ad255f42d5b430350db1c214e9018be35cad868e3dc5555148775ea799557d8860c72afd9&scene=21#wechat_redirect"
-    - 留学转移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=2&sn=bf7ba7e79564f0b06ed9cfd3aa0cf2e1&chksm=c35ad24ff42d5b5907a25f41decc022c3781fb0769615d8cc11eab0b7adcf1350798cf8bd933&scene=21#wechat_redirect"
-    - 大西洋四省移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485526&idx=4&sn=2ee208fe22ad136405872e4917fe3b71&chksm=c35ad255f42d5b4315f20938a4cc3bf7fd90b4f0b854fd74722cf6587f6af1cf1b7337804097&scene=21#wechat_redirect"
-    - 爱德华王子岛投资: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485648&idx=2&sn=9cc5777f0f7433aa79a2d34037932c52&chksm=c35ad2d3f42d5bc591890c6083242b3800ba2e68c18be1ca7d7a4a48d6254fb627956cb401d1&scene=21#wechat_redirect"
-  成功案例: "chenggonganli"
-  服务内容: "fuwuneirong"
-  自雇课堂: "https://apprxycjw0d7727.h5.xiaoeknow.com/p/decorate/homepage"
-  小工具: 
-    - EE CRS: "EE_CRS.html"
-    - 联邦技术移民打分: "EE_SCORE.html"
-    - BCPNP技术打分: "BCPNP.html"
-    - 安省雇主担保打分: "ONIP.html"
- 
-  #Author's home: "https://deanattali.com"
+    - 萨省企业家移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485516&idx=4&sn=51b4c09dea03bd7949a141bb3a385316&chksm=c35ad24ff42d5b5918f6052910f3ef838ff80c18cf9f56ccfa7a251521b671dd59a3b1d0031e&scene=21#wechat_redirect"
+    - 亲属担保: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485524&idx=1&sn=f23f98a4e29a23b5971db2b2fe509b84&chksm=c35ad27ff42d5b69902ea9405640136168c5b8cfd8e9e3e62f0a8576ef5265bc8d81eae7f67d&scene=21#wechat_redirect"
+    - LMIA劳工市场测试: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485541&idx=1&sn=6e4e2a7a91334b15ce1ebe9a11f2d4b4&chksm=c35ad21cf42d5b0a5a17efcc39b9a07f844ac570b61949bca1103bc6400d5daddb37b96ac6d2&scene=21#wechat_redirect"
+    - 创业移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485628&idx=2&sn=203cbebe8996fd4e480e4d85d6627e4f&chksm=c35ad2bff42d5ba9e5db7d3a0ef22ad8ad6419bea42496a904cd9f3e092f8c7a50a12d630d4d&scene=21#wechat_redirect"
+    - 自雇移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485636&idx=1&sn=50c85e5e2e6f1e740e725b5c9f259729&chksm=c35ad2a7f42d5bb15513f504e8f7d5e21e4e8dd1395db0f0fe199dfb2183a092762b4c5e1c3c&scene=21#wechat_redirect"
+    - 技术移民: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485636&idx=2&sn=aa3a5e6f091b1ef03a0d39c8769b24d6&chksm=c35ad2a7f42d5bb16deca4c8f2c0ea225fb011a0c07c978c048aae52dc3ef9ce63a235648227&scene=21#wechat_redirect"
+  在线学习: "http://mp.weixin.qq.com/s?__biz=Mzk0OTIyNzM3Mg==&mid=2247485593&idx=1&sn=7dbf3a75f57a141a314377a800ce2f55&chksm=c35ad29af42d5b8c55c9b6cc478299842c38117e996a741de54ee1be68f7f6bc0511e27d7e12&scene=21#wechat_redirect"
 
-# --- Logo --- #
+# Social media links used in footer
+# You can remove the ones you don't need or add new ones.
+# For RSS, if you don't have a feed, just remove the line.
+footer-links:
+  RSS: /feed.xml
+  GitHub: https://github.com/VincentTam
+  #Twitter: https://twitter.com/your-twitter
+  #Weibo: https://weibo.com/your-weibo
+  #Linkedin: https://www.linkedin.com/in/your-linkedin
+  #YouTube: https://www.youtube.com/channel/your-channel
+  #Facebook: https://www.facebook.com/your-facebook
+  #Instagram: https://www.instagram.com/your-instagram
 
-# Image to show in the navigation bar - works best with a square image
-# Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/邦盈.png"
+# Contact information
+# Leave the empty quotes as is if you don't want to show any of these.
+email: ""
+phone: ""
+fax: ""
+address: ""
 
-# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-round-avatar: true
+# --- Styling options --- #
 
-# If you want to have an image logo in the top-left corner instead of having the title of the website,
-# then specify the following parameter
-title-img: /assets/img/邦盈.png
+# The accent color is used to highlight items on hover, menu popups, etc.
+# You can use any valid CSS color value.
+# By default, this is set to "cadetblue".
+accent-color: "cadetblue"
 
+# The background image used on each page
+# Set to a full URL to use an online image, or put the image file in the "/assets/img/" directory and use the file name.
+# By default, this is set to "assets/img/header_image.jpg"
+#background-image: "assets/img/header_image.jpg"
 
-# --- Footer social media links --- #
+# The background color used on each page
+# You can use any valid CSS color value.
+# By default, this is set to "white".
+background-color: "white"
 
-# Select the social network links that you want to show in the footer.
-# Uncomment the links you want to show and add your information to each one.
-social-network-links:
-  email: "joy.zhou@easyimmi.cn"
-  xiaohongshu: easyimmi
-  wechat: easyimmi
-  tiktok: easyimmi
-#  github: daattali
-#  douyin: yiminxiaozhou
-#  patreon: yiminxiaozhou
-#  youtube: yiminxiaozhou
-#  reddit: yourname
-#  linkedin: daattali
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
-#  telegram: yourname
-#  calendly: yourname
-#  mastodon: instance.url/@username
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
+# The color used for regular text
+# You can use any valid CSS color value.
+# By default, this is set to "black".
+text-color: "black"
 
-# If you want to show a link to an RSS in the footer, add the site description here.
-# If you don't want to show an RSS link, remove the following line.
-# rss-description: This website is a virtual proof that I'm awesome
+# The color used for headings (h1, h2, h3, etc.)
+# You can use any valid CSS color value.
+# By default, this is set to "black".
+heading-color: "black"
 
-# --- General options --- #
+# --- Build options --- #
 
-# Select which social network share links to show in posts
-share-links-active:
-  #xiaohongshu: true
-  #tiktok: true
-  #douyin: true
-  #vk: false
-
-# How to display the link to your website in the footer
-# Remove this if you don't want a link in the footer
-url-pretty: "easyimmi.cn"
-
-# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 50
-
-# Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
-
-# Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
-
-# The keywords to associate with your website, for SEO purposes
-keywords: "移民咨询,咨询,移民中介,中介,中介服务,移民服务,移民小舟,移民文案,文案,文案服务,雇主资源,商业计划书,考察,BP,商业考察,移民周麻麻,easyimmi.cn,easyimmi,枫叶卡,绿卡,PR,永居,身份,工签,移民签,学签,邦盈移加易,邦盈,移加易,青岛邦盈,移民,加拿大移民,加拿大,雇主担保移民,投资移民,技术移民,澳洲移民,创业移民,省提名,自雇移民,留学转移民,旅转学,创业移民,海外移民,邦盈海外,环球海外,飞出国,材料,料简,简化,中国公民,民办,办理,签证,更便,便捷"
-
-# --- Colours / background image --- #
-
-# Personalize the colours in your website. Colour values can be any valid CSS colour
-
-navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
-navbar-border-col: "#DDDDDD"
-page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#EAEAEA"
-footer-text-col: "#777777"
-footer-link-col: "#404040"
-
-# Alternatively, the navbar, footer, and page background can be set to an image
-# instead of colour
-
-#navbar-img: "/assets/img/bgimage.png"
-footer-img: "/assets/img/bgimage.png"
-#page-img: "/assets/img/bgimage.png"
-
-# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
-
-# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
-#  - "/assets/css/custom-styles.css"
-
-# If you have common JavaScript files that should be included in every page, list them here
-#site-js:
-#  - "/assets/js/custom-script.js"
-
-# --- Web Analytics Section --- #
-
-# Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
-
-# Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: ""
-
-# Google Tag Manager ID
-#gtm: ""
-
-# Matomo (aka Piwik) Web statistics
-# Uncomment the following section to enable Matomo. The opt-out parameter controls
-# whether or not you want to allow users to opt out of tracking.
-#matomo:
-#  site_id: "9"
-#  uri: "demo.wiki.pro"
-#  opt-out: true
-
-# --- Comments --- #
-
-# To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
-
-# To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
-#fb_comment_id: ""
-
-# To use Utterances comments: (0) uncomment the following section, (1) fill in
-# "repository" (make sure the repository is public), (2) Enable Issues in your repository,
-# (3) Install the Utterances app in your repository https://github.com/apps/utterances
-# See more details about the parameters below at https://utteranc.es/
-#utterances:
-#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
-#  issue-term: title   # Mapping between blog posts and GitHub issues
-#  theme: github-light # Utterances theme
-#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
-
-# To use Staticman comments, uncomment the following section. You may leave the reCaptcha
-# section commented if you aren't using reCaptcha for spam protection. 
-# Using Staticman requires advanced knowledge, please consult 
-# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
-# instructions. For any support with staticman please direct questions to staticman and 
-# not to BeautifulJekyll.
-staticman:
-  repository : vincenttam/beautiful-jekyll # GitHub username/repository eg. "daattali/beautiful-jekyll"
-  branch     : gh-pages # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
-  endpoint   : https://secretman3.herokuapp.com/v3/entry/github/ # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
-#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
-#    siteKey  : # You need to apply for a site key on Google
-#    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
-
-# --- Misc --- #
-
-# Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
-
-# Facebook App ID
-#fb_app_id: ""
-
-# --- You don't need to touch anything below here (but you can if you want) --- #
-
-# Output options (more information on Jekyll's site)
-timezone: "Asia/ShangHai"
-markdown: kramdown
-highlighter: rouge
-permalink: /:year-:month-:day-:title/
+# Number of posts to show on the home page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "5".
 paginate: 5
 
-kramdown:
-  input: GFM
+# Number of posts to show in each category page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "5".
+category-paginate: 5
 
-# Default YAML values (more information on Jekyll's site)
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: false  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
-  -
-    scope:
-      path: "" # any file that's not a post will be a "page" layout by default
-    values:
-      layout: "page"
+# Number of posts to show in each tag page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "5".
+tag-paginate: 5
 
-# Exclude these files from production site
-exclude:
-  - CHANGELOG.md
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - screenshot.png
-  - docs/
+# Number of posts to show in each author page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "5".
+author-paginate: 5
 
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
+# Number of posts to show in each year page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "10".
+year-paginate: 10
 
-#remote_theme: daattali/beautiful-jekyll@5.0.0
+# Number of posts to show in each month page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "10".
+month-paginate: 10
 
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
+# Number of posts to show in each day page
+# Set to a positive integer to enable pagination.
+# By default, this is set to "10".
+day-paginate: 10
+
+# --- Advanced options --- #
+
+# If you want to link to your old site, you can specify the old domain here.
+# For example, "example.com" will link "/blog/awesome-article" to "example.com/blog/awesome-article"
+#old-domain:
+
+# This option allows you to specify custom menu items in the top-right menu
+# Use the following format: "Title": "URL"
+# For example:
+#custom-nav-menu:
+#  "GitHub": "https://github.com/VincentTam"
+#  "Twitter": "https://twitter.com/your-twitter"
+#  "Weibo": "https://weibo.com/your-weibo"
+#  "LinkedIn": "https://www.linkedin.com/in/your-linkedin"
+#  "YouTube": "https://www.youtube.com/channel/your-channel"
+#  "Facebook": "https://www.facebook.com/your-facebook"
+#  "Instagram": "https://www.instagram.com/your-instagram"
+
+# Whether to show a link to your GitHub profile in the footer
+show_github: true
+
+# Whether to show a link to your Twitter profile in the footer
+show_twitter: true
+
+# Whether to show a link to your Weibo profile in the footer
+show_weibo: true
+
+# Whether to show a link to your LinkedIn profile in the footer
+show_linkedin: true
+
+# Whether to show a link to your YouTube channel in the footer
+show_youtube: true
+
+# Whether to show a link to your Facebook profile in the footer
+show_facebook: true
+
+# Whether to show a link to your Instagram profile in the footer
+show_instagram: true
+
+# Whether to show a "powered by Beautiful Jekyll" attribution in the footer
+show_powered_by: true
