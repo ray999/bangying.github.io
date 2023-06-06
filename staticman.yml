@@ -12,25 +12,20 @@ comments:
   #
   # Names of the fields the form is allowed to submit. If a field that is
   # not here is part of the request, an error will be thrown.
-  allowedFields:
-    - name
-    - email
-    - url
-    - message
+  allowedFields: ["name", "email", "url", "message"]
 
   # (*) REQUIRED WHEN USING NOTIFICATIONS
   #
   # When allowedOrigins is defined, only requests sent from one of the domains
   # listed will be accepted. The origin is sent as part as the `options` object
   # (e.g. <input name="options[origin]" value="https://yourdomain.com/post1")
-  # allowedOrigins:
-  #   - "https://example.com"
+  # allowedOrigins: ["https://example.com"]
 
   # (*) REQUIRED
   #
   # Name of the branch being used. Must match the `branch` in the theme config
   # file.
-  branch: "gh-pages" # use "master" for user page or "gh-pages" for project pages
+  branch: "gh-pages" #  use "master" for user page or "gh-pages" for project pages
 
   commitMessage: "New comment by {fields.name}"
 
@@ -74,18 +69,18 @@ comments:
   # via email when someone adds a reply or a new comment. This requires an account
   # with Mailgun, which you can get for free at https://mailgun.com.
   # notifications:
-  #   # Enable notifications
-  #   enabled: true
+    # Enable notifications
+    # enabled: true
 
-  #   # (!) ENCRYPTED
-  #   #
-  #   # Mailgun API key
-  #   apiKey: ""
+    # (!) ENCRYPTED
+    #
+    # Mailgun API key
+    # apiKey: ""
 
-  #   # (!) ENCRYPTED
-  #   #
-  #   # Mailgun domain (encrypted)
-  #   domain: ""
+    # (!) ENCRYPTED
+    #
+    # Mailgun domain (encrypted)
+    # domain: ""
 
   # (*) REQUIRED
   #
@@ -94,10 +89,7 @@ comments:
 
   # Names of required files. If any of these isn't in the request or is empty,
   # an error will be thrown.
-  requiredFields:
-    - name
-    - email
-    - message
+  requiredFields: ["name", "email", "message"]
 
   # List of transformations to apply to any of the fields supplied. Keys are
   # the name of the field and values are possible transformation types.
